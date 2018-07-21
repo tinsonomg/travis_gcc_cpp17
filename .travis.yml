@@ -11,5 +11,5 @@ before_install:
   - brew install --with-clang llvm@6
 
 script:
-  - clang++ main.cpp -std=c++17 -stdlib=libc++ -o travis_gcc_cpp17
+  - clang++ main.cpp -std=c++17 -stdlib=libc++ -v -o travis_gcc_cpp17
   - ./travis_gcc_cpp17
