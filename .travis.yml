@@ -14,9 +14,10 @@ script:
   - brew update
   - brew search llvm
   - brew install llvm@6
+  - clang --version
+  - /usr/local/opt/llvm/bin/clang --version
   - echo 'export PATH="/usr/local/opt/llvm@6/bin:$PATH"' >> ~/.bash_profile
   - LDFLAGS += -L/usr/local/opt/llvm@6/lib
   - CPPFLAGS += -I/usr/local/opt/llvm@6/include
-  - clang --version
-  - clang++ main.cpp -std=c++17 -stdlib=libc++ -v -o travis_gcc_cpp17
+  - /usr/local/opt/llvm/bin/clang++ main.cpp -std=c++17 -stdlib=libc++ -v -o travis_gcc_cpp17
   - ./travis_gcc_cpp17
