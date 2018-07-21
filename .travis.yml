@@ -14,6 +14,8 @@ script:
   - brew update
   - brew search llvm
   - brew install llvm@5
+  - LDFLAGS += -L/usr/local/opt/llvm@5/lib
+  - CPPFLAGS += -I/usr/local/opt/llvm@5/include
   - clang --version
   - clang++ main.cpp -std=c++17 -stdlib=libc++ -v -o travis_gcc_cpp17
   - ./travis_gcc_cpp17
