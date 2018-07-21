@@ -8,8 +8,10 @@ matrix:
       compiler: clang
 
 before_install:
-  - brew search llvm
+#  - brew search llvm
 
 script:
+  - brew search llvm
+  - brew search clang
   - clang++ main.cpp -std=c++17 -stdlib=libc++ -v -o travis_gcc_cpp17
   - ./travis_gcc_cpp17
