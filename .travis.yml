@@ -11,6 +11,7 @@ before_install:
 #  - brew search llvm
 
 script:
+  - brew update
   - brew search llvm
   - brew search clang
   - clang++ main.cpp -std=c++17 -stdlib=libc++ -v -o travis_gcc_cpp17
