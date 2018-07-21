@@ -8,7 +8,7 @@ matrix:
       compiler: clang
 
 before_install:
-#  - brew install --with-clang llvm@6
+  - brew search llvm
 
 script:
   - clang++ main.cpp -std=c++17 -stdlib=libc++ -v -o travis_gcc_cpp17
